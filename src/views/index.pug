@@ -1,0 +1,54 @@
+doctype html
+html
+	head
+		title Course Tracking App
+		meta(charset='utf-8')
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css')
+		link(rel='stylesheet' type='text/css' href='css/style.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js')
+	body
+		.container-fluid
+			nav
+				ul
+					li
+						a(href='/') Home
+					li
+						a(href='/addStudent') Students-register
+					li
+						a(href='/addTeacher') Teachers-register
+					li
+						a(href='/addSubject') Add a course
+		.container
+			h1(style='text-align:center;') Welcome to the Course Tracking App!
+
+			p This is a mock application for keeping track of students applying to take courses. You will find ficticious information with the real goal of educating users so feel free to subscribe!
+		br
+		.container
+			.row
+				.col-12
+					h1 Student Registration List
+					ul
+						each student in studentList
+							//- li= student.name
+							li Student number #{student.id} is #{student.name}
+		br
+		.container
+			.row
+				.col-12
+					h1 Teacher List
+					ul
+						each teacher in teacherList
+							//- li= teacher.name
+							li We have teacher #{teacher.id} named #{teacher.name}
+		br
+		.container
+			.row
+				.col-12
+					h1 Course List
+					ul
+						each course in subjectList
+							//- li= course.subject_name
+							li(id= course) We have a course named #{course.subject_name} in #{course.semester}

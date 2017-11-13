@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		title Subject Form Page 
+		meta(charset='utf-8')
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css')
+		link(rel='stylesheet' type='text/css' href='css/style.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js')
+	body
+		.container-fluid
+				nav
+					ul
+						li
+							a(href='/') Home
+						li
+							a(href='/addStudent') Students-register
+						li
+							a(href='/addTeacher') Teachers-register
+						li
+							a(href='/addSubject') Add a course
+		br
+		.container
+			.row
+				.col-3
+					form(action='/addSubject' method='post' autocomplete='off')
+						label(for='text') Subject Name:
+						input#name.form-control(type='text' name= 'subject_name')
+						label(for='text') Semester:
+						input#name.form-control(type='text' name= 'semester')
+						label(for='text') Classroom:
+						input#name.form-control(type='text' name= 'classroom')
+						label(for='text') Student Id:
+						input#name.form-control(type='text' name= 'studentId')
+						label(for='text') Teacher Id:
+						input#name.form-control(type='text' name= 'teacherId')
+						button.btn.btn-primary(type='submit') submit
